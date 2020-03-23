@@ -1,45 +1,51 @@
-## automatic-octo-template
+# Imgur-album-downloader
 
-Optimized for python 3.6
+<small>_Optimized for python 3.6_</small>
 
-This is a project template. Used in other repositories.
+Project for downloading - in an semi-automatic way - solo images and complete 
+albums from imgur. 
 
 ----------------------
 
-### Dependencies
+## Dependencies
 
-For developers, python requirements could be find in the project's root. For installing the requirements, 
-in your ___venv___ or ___anaconda env___, just run the following command:
+For installing the requirements, in your ___venv___ or ___anaconda env___, 
+just run the following command:
 
-`pip install -r requirements.txt`
+```shell script
+pip install -r requirements.txt
+```
 
 ----------------
 
-### Project's Structure
+## Project's Structure
 
 ```bash 
 .
-└── automatic-octo-template
+└── imgur-album_downloader
     ├── data
-    │   └── settings.json
+    │   └── downloaded-images
+    │       ├── img-1.jpg
+    │       ├── ...
+    │       └── img-25.jpg
     ├── docs
-    │   ├── reference_articles
-    │   ├── ...
     │   └── CREDITS
     ├── src
     │   ├── __init__.py
-    │   └── bot.py
+    │   ├── helpers.py
+    │   ├── imgur.py
+    │   └── settings.json
     ├── tests
     │   └── unittests
-    │       ├── data
-    │       └── __init__.py
+    │       ├── __init__.py
+    │       └── test_helpers.py
     ├── .gitignore
     ├── LICENSE
     ├── README.md
     └── requirements.txt
 ```
 
-#### Directory description
+### Directory description
 
 - __data:__ The data dir. Group of non-script support files.
 - __docs:__ The documentation dir.
@@ -48,37 +54,35 @@ in your ___venv___ or ___anaconda env___, just run the following command:
 
 -----------------------
 
-### Usage Notes
+## Usage Notes
 
-#### Running
+Section aimed on clarifying some running issues.
 
-For running it, on the `~/src` directory just run the follow command:
+### Running
 
-`python automatic_octo.py` 
+For running it, at the `~/src` directory just run:
 
-#### Notes
+```shell script
+python imgur.py 'imgur_url' 'filepath'
+``` 
 
-- Just a few notes
+or, if importing it as a module, just run:
+````python
+from imgur import ImgurDownload
+
+if __name__ == '__main__':
+    ImgurDownload('imgur_url', 'filepath').__call__()
+````
+
+### JSON structure
+
+````json
+{
+  "client_id": "client_id",
+  "client_secret": "client_secret"
+}
+````
+
+_obs: in order to run this application you must have a json file at `~/src/settings.json`. This json must follow the structure above._
 
 ---------------
-
-### Versioning
-
-This project is under development.
-
-#### Roadmap
-
-__It needed to:__
-
-- Develop the feature #0
-    - feature #0.1:
-        - Techniques:
-            - technique #0
-            - technique #1
-            - technique #2
-    - feature #0.2:
-        - technology #0
-
-- Develop the feature #1
-
---------------
