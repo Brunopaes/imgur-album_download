@@ -171,3 +171,7 @@ class ImgurDownloader:
 
     def __call__(self, *args, **kwargs):
         self.download_image_list(self.get_image_list())
+
+
+if __name__ == '__main__':
+    ImgurDownloader('https://imgur.com/a/fRVXNwK', 'alina-lopez').__call__()
