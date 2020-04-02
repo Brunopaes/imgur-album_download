@@ -174,4 +174,4 @@ class ImgurDownloader:
 
 
 if __name__ == '__main__':
-    ImgurDownloader('https://imgur.com/a/fRVXNwK', 'alina-lopez').__call__()
+    ImgurDownloader('https://imgur.com/a/btjGTgJ', 'magen-hana').__call__()
