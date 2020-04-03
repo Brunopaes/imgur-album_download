@@ -1,4 +1,4 @@
-# Imgur-downloader
+# Imgur Downloader
 
 <small>_Optimized for python 3.6_</small>
 
