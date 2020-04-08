@@ -174,4 +174,12 @@ class ImgurDownloader:
 
 
 if __name__ == '__main__':
-    ImgurDownloader('https://imgur.com/a/faqX8Q9', 'marina-emanuela').__call__()
+    list_ = [
+        'LQ1wC',
+        'YulUb',
+        '1ZHwE',
+        'ykQAr',
+    ]
+    for _ in list_:
+        ImgurDownloader('https://imgur.com/a/{}'.format(_),
+                        'alyssa-arce').__call__()
