@@ -175,8 +175,26 @@ class ImgurDownloader:
 
 if __name__ == '__main__':
     list_ = [
-        'TfPx5mn',
+        'J9Vje',
+        'fM3lw',
+        'a8upw',
+        'f97t4',
+        'ewC4Y',
+        'ZVIPWvR',
+        'WNs0Q',
+        'gWwc32z',
+        'oUl2oZd',
+        'ugKul3O',
+        'FQraplU',
+        'vk08rd8',
+        '9EKpsyt',
+        'MriHsmj',
+        'NFw5FsO',
+        'oigGQP5',
+        '5mtL7jA',
+        'feVlj0q',
+        'pA5oz4B',
     ]
     for _ in list_:
         ImgurDownloader('https://imgur.com/a/{}'.format(_),
-                        'lis-giolito').__call__()
+                        'angel-constance').__call__()
