@@ -175,8 +175,8 @@ class ImgurDownloader:
 
 if __name__ == '__main__':
     list_ = [
-        'uRpb4HT',
+        'Wk8CJnB',
     ]
     for _ in list_:
         ImgurDownloader('https://imgur.com/a/{}'.format(_),
-                        'alejandra-guilmant').__call__()
+                        'jessica-witmann').__call__()
