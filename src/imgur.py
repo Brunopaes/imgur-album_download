@@ -175,13 +175,12 @@ class ImgurDownloader:
 
 if __name__ == '__main__':
     list_ = [
-        'G5E7W',
-        'Ef7UT',
-        'ile9T',
-        'FjOxV',
-        'Di0TG',
-        'VKcJl',
+        'urG0s',
+        'L6xOv',
+        'BEfrJ',
+        'f1eUx',
+        'nje6L',
     ]
     for _ in list_:
         ImgurDownloader('https://imgur.com/a/{}'.format(_),
-                        'nicole-voss').__call__()
+                        'kayslee-collins').__call__()
