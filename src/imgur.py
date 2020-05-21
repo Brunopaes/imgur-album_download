@@ -14,7 +14,7 @@ class ImgurDownloader:
     Can handle albums and solo images.
 
     >>> from imgur import ImgurDownloader
-    >>> ImgurDownloader('https://imgur.com/a/nUDhP', 'amanda-cerny').__call__()
+    >>> ImgurDownloader('https://imgur.com/a/test', 'test-dir').__call__()
 
     """
     def __init__(self, imgur_url, filename):
@@ -175,12 +175,8 @@ class ImgurDownloader:
 
 if __name__ == '__main__':
     list_ = [
-        'NLehN',
-        '2SmYL',
-        'vWVEQ',
-        'LqEUL',
-        'y4m1w',
+        '',
     ]
     for _ in list_:
         ImgurDownloader('https://imgur.com/a/{}'.format(_),
-                        'brittany-brousseau').__call__()
+                        'dir-name').__call__()
