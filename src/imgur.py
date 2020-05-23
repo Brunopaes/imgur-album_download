@@ -175,8 +175,13 @@ class ImgurDownloader:
 
 if __name__ == '__main__':
     list_ = [
-        '',
+        'HWzoq8V',
+        'z5Ul2TO',
+        'BboomFW',
+        'IPKHjcg',
+        'GJvgbkF',
+        'QAuAt2e',
     ]
     for _ in list_:
         ImgurDownloader('https://imgur.com/a/{}'.format(_),
-                        'dir-name').__call__()
+                        'test').__call__()
