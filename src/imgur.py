@@ -13,8 +13,8 @@ class ImgurDownloader:
 
     Can handle albums and solo images.
 
-    >>> from imgur import ImgurDownloader
-    >>> ImgurDownloader('https://imgur.com/a/test', 'test-dir').__call__()
+    # >>> from imgur import ImgurDownloader
+    # >>> ImgurDownloader('https://imgur.com/a/test', 'test-dir').__call__()
 
     """
     def __init__(self, imgur_url, filename):
@@ -54,7 +54,7 @@ class ImgurDownloader:
 
         """
         spliced_url = self.imgur_url.split('/')
-        if spliced_url[3] is 'a':
+        if spliced_url[3] == 'a':
             return spliced_url[-1], True
         return spliced_url[-1].split('.')[0], False
 
@@ -175,13 +175,8 @@ class ImgurDownloader:
 
 if __name__ == '__main__':
     list_ = [
-        'HWzoq8V',
-        'z5Ul2TO',
-        'BboomFW',
-        'IPKHjcg',
-        'GJvgbkF',
-        'QAuAt2e',
+        '53gkO4W',
     ]
     for _ in list_:
         ImgurDownloader('https://imgur.com/a/{}'.format(_),
-                        'test').__call__()
+                        'svenja-van-den-boogart').__call__()
