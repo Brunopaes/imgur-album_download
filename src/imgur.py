@@ -162,7 +162,11 @@ class ImgurDownloader:
         -------
 
         """
-        for idx, img in tqdm(enumerate(image_list, 1), total=len(image_list)):
+        for idx, img in tqdm(
+                enumerate(image_list, 1),
+                total=len(image_list),
+                desc=self.filename
+        ):
             filename = self.filename_format(idx, self.get_extension(img))
             image_bytes = self.requesting_images(img.link)
 
@@ -174,9 +178,24 @@ class ImgurDownloader:
 
 
 if __name__ == '__main__':
-    list_ = [
-        '53gkO4W',
-    ]
-    for _ in list_:
-        ImgurDownloader('https://imgur.com/a/{}'.format(_),
-                        'svenja-van-den-boogart').__call__()
+    arguments = {
+        'isabella-strangmüller': ['https://imgur.com/a/7ZGr5hD'],
+        'maitland-ward': ['https://imgur.com/a/8kl1mPc'],
+        'mimi-gwozdz': ['https://imgur.com/a/J5IJHmx'],
+        'alona-horta': ['https://imgur.com/a/Oie83ya'],
+        'dominique-regatschnig': ['https://imgur.com/a/hDcXfBU', 'PpQhtNN'],
+        'germany-playmates-2021': ['https://imgur.com/a/zszqDII'],
+        'maelys-garouls': ['https://imgur.com/a/riUlzQM'],
+        'viktoriia-makhova': ['https://imgur.com/a/z8x12Oo'],
+        'marisa-ehret': ['https://imgur.com/a/tFojipg'],
+        'veronika-klimovits': ['https://imgur.com/a/ZpQfD7i', 'aTtQdeK'],
+    }
+
+    for arg in arguments.keys():
+        for url in arguments.get(arg):
+            ImgurDownloader(
+                url if url.startswith('https://')
+                else 'https://imgur.com/a/{}'.format(url),
+                arg
+            ).__call__()
+
